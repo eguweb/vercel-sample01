@@ -22,12 +22,14 @@ module.exports = withBundleAnalyzer({
 })
 
 
+// next.config.js
 
-const withPWA = require("next-pwa");
+const withPWA = require('next-pwa')
 
 module.exports = withPWA({
   pwa: {
-    dest: "public", // swの出力ディレクトリ
-    // runtimeCaching: []
+    dest: 'public',
+    register: true,
+    skipWaiting: true,
   },
-});
+})
