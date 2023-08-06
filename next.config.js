@@ -26,10 +26,13 @@ module.exports = withBundleAnalyzer({
 const withPWA = require('next-pwa')
 const runtimeCaching = require('next-pwa/cache')
 
+const withPWA = require("next-pwa");
+
 module.exports = withPWA({
   pwa: {
-    dest: 'public',
-    runtimeCaching,
-    buildExcludes: [/middleware-manifest.json$/],  // 追加
+    dest: "public",
+    register: true,
+    skipWaiting: true,
   },
-})
+  reactStrinctMode: true,
+});
