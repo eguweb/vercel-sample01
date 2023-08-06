@@ -23,16 +23,11 @@ module.exports = withBundleAnalyzer({
 
 
 
-const withPWA = require('next-pwa')
-const runtimeCaching = require('next-pwa/cache')
-
 const withPWA = require("next-pwa");
 
 module.exports = withPWA({
   pwa: {
-    dest: "public",
-    register: true,
-    skipWaiting: true,
+    dest: "public", // swの出力ディレクトリ
+    // runtimeCaching: []
   },
-  reactStrinctMode: true,
 });
